@@ -11,12 +11,11 @@ class Etapa{
     function getVencedor() {
         return $this->vencedor;
     }
-    function setVencedor() {
-        $this->vencedor = $vencedor;
-    }
-
     function getLocal() {
         return $this->local;
+    }
+    function setVencedor() {
+        $this->vencedor = $vencedor;
     }
     function setLocal() {
         $this->local = $local;
