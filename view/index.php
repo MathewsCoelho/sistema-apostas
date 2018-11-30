@@ -44,5 +44,8 @@
 			</div>
 		</form>
 	</div>
+	<form action="../controller/usuario.php" method="post">
+		<input type="submit" name="acao" value="Listar">
+	</form>
 </body>
 </html>

@@ -8,6 +8,7 @@ class Usuario {
     private $email;
     private $senha;
     private $status;
+    private $ativo;
 
     public function __construct() {
         
@@ -32,6 +33,9 @@ class Usuario {
     function getStatus() {
         return $this->status;
     }
+    function getAtivo() {
+        return $this->ativo;
+    }
 
     function setId($id) {
         $this->id = $id;
@@ -52,9 +56,12 @@ class Usuario {
     function setStatus($status) {
         $this->status = $status;
     }
+    function setAtivo($ativo) {
+        $this->ativo = $ativo;
+    }
         
     public function __toString() {
-        return "\Usuario[id=$this->id, nome=$this->nome, cpf=$this->cpf, email=$this->email, senha=$this->senha, status=$this->status, $this->__toString()]";
+        return "\Usuario[id=$this->id, nome=$this->nome, cpf=$this->cpf, email=$this->email, senha=$this->senha, status=$this->status, ativo=$this->ativo, $this->__toString()]";
     }
 
 }

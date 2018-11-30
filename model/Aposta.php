@@ -3,6 +3,7 @@
 class Aposta{
     
     private $id_aposta;
+    private $ativo;
 
     function __construct() {
     }
@@ -11,11 +12,19 @@ class Aposta{
         return $this->id_aposta;
     }
 
-    function getidAposta() {
+    function getAtivo() {
+        return $this->ativo;
+    }
+
+    function setidAposta() {
         $this->id_aposta = $id_aposta;
     }
-        
+       
+    function setAtivo() {
+        $this->ativo = $ativo;
+    }
+
     public function __toString() {
-        return "\Aposta[id_aposta=$this->id_aposta, $this->__toString()]";
+        return "\Aposta[id_aposta=$this->id_aposta, ativo=$this->ativo, $this->__toString()]";
     }
 }

@@ -6,7 +6,7 @@ CREATE TABLE usuario
     email character varying(50),
     senha character varying(50),
     status character varying(6),
-    tipo int
+    ativo int
 );
 
 CREATE TABLE etapa
@@ -14,7 +14,8 @@ CREATE TABLE etapa
     id_etapa serial PRIMARY KEY,
     local character varying(50),
     id_vencedor int,
-    id_cavalo int
+    id_cavalo int,
+    ativo int
 );
 
 CREATE TABLE aposta
@@ -22,13 +23,15 @@ CREATE TABLE aposta
     id_aposta serial PRIMARY KEY,
     data_aposta date ,
     id_usuario int REFERENCES usuario (id_usuario),
-    id_etapa int  REFERENCES etapa (id_etapa)
+    id_etapa int  REFERENCES etapa (id_etapa),
+    ativo int
 );
     
 CREATE TABLE cavalo
 (
     id_cavalo serial PRIMARY KEY,
-    numero int
+    numero int,
+    ativo int
 );
 
 CREATE TABLE ranking

@@ -3,6 +3,7 @@
 class Cavalo{
     
     private $numero;
+    private $ativo;
 
     function __construct() {
     }
@@ -16,6 +17,6 @@ class Cavalo{
     }
         
     public function __toString() {
-        return "\Cavalo[numero=$this->numero, $this->__toString()]";
+        return "\Cavalo[numero=$this->numero, ativo=$this->ativo, $this->__toString()]";
     }
 }
