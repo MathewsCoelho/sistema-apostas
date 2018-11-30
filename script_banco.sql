@@ -2,8 +2,7 @@ CREATE TABLE usuario
 (
     id_usuario serial PRIMARY KEY,
     nome character varying(30),
-    dt_nasc date,
-    cpf int,
+    cpf character varying(25),
     email character varying(50),
     senha character varying(50),
     status character varying(6),

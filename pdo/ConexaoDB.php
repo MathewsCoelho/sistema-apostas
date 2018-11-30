@@ -9,10 +9,10 @@ final class ConexaoDB {
     public static function getInstance(){
         if(self::$conn == null){
             try {
-            self::$conn = new PDO('pgsql:dbname=apostas; user=postgres; password=senha5; host=localhost');
-            self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            print_r(self::$conn);
-        } catch (PDOException $ex) { 
+                self::$conn = new PDO('pgsql:dbname=apostas; user=postgres; password=senha5; host=localhost');
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                print_r(self::$conn);
+            } catch (PDOException $ex) { 
             echo $ex->getMessage();
         }
             return self::$conn;
