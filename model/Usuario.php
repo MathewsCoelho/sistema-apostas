@@ -1,7 +1,7 @@
 
 <?php
 
-abstract class Usuario {
+class Usuario {
     private $id;
     private $nome;
     private $cpf;
