@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Sistema de Apostas </title>
-</head>
+<?php
+    require_once("header.php");
+?> 
 <body>
-	<a href=""> Ranking </a>
-	<a href=""> Etapas </a>
+	<form action="../controller/ranking.php" method="post">
+		<input type="submit" name="acao" value="Listar Ranking">
+	</form>
+
+	<form action="../controller/etapa.php" method="post">
+		<input type="submit" name="acao" value="Listar Etapas">
+	</form>
 </body>
 </html>

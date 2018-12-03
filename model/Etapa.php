@@ -1,12 +1,13 @@
 <?php
 
+
 class Etapa{
     
     private $vencedor;
     private $local;
     private $ativo;
 
-    function __construct() {
+    public function __construct() {
     }
 
     function getVencedor() {
@@ -18,13 +19,13 @@ class Etapa{
     function getAtivo() {
         return $this->ativo;
     }
-    function setVencedor() {
+    function setVencedor($vencedor) {
         $this->vencedor = $vencedor;
     }
-    function setLocal() {
+    function setLocal($local) {
         $this->local = $local;
     }
-    function setAtivo() {
+    function setAtivo($ativo) {
         $this->ativo = $ativo;
     }
         

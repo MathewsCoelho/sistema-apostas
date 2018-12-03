@@ -11,14 +11,14 @@ class Ranking{
     function getPontos() {
         return $this->pontos;
     }
-    function setPontos() {
+    function setPontos($pontos) {
         $this->pontos = $pontos;
     }
 
     function getUsuario() {
         return $this->usuario;
     }
-    function setUsuario() {
+    function setUsuario($pontos) {
         $this->usuario = $usuario;
     }
         

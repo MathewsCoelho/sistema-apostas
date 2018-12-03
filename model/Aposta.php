@@ -4,6 +4,9 @@ class Aposta{
     
     private $id_aposta;
     private $ativo;
+    private $usuario;
+    private $etapa;
+    private $data;
 
     function __construct() {
     }
@@ -16,12 +19,36 @@ class Aposta{
         return $this->ativo;
     }
 
-    function setidAposta() {
+    function getUsuario() {
+        return $this->usuario;
+    }
+
+    function getEtapa(){
+        return $this->etapa;
+    }
+
+    function getData(){
+        return $this->data;
+    }
+
+    function setidAposta($id_aposta) {
         $this->id_aposta = $id_aposta;
     }
        
-    function setAtivo() {
+    function setAtivo($ativo) {
         $this->ativo = $ativo;
+    }
+
+    function setUsuario($usuario) {
+        $this->usuario = $usuario;
+    }
+
+    function setEtapa($etapa) {
+        $this->etapa = $etapa;
+    }
+
+    function setEtapa($data) {
+        $this->data = $data;
     }
 
     public function __toString() {

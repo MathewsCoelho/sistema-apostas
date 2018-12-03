@@ -21,12 +21,12 @@ private $conn;
         try 
         {
             $stmt = $this->conn->prepare("INSERT INTO $this->tabela (nome,email,senha,cpf,ativo, status) VALUES (:nome,:email,:senha,:cpf,:ativo,:status)");
-            $stmt->bindValue(':nome', $usuario->getNome());
-            $stmt->bindValue(':email', $usuario->getEmail());
-            $stmt->bindValue(':senha', $usuario->getSenha());
-            $stmt->bindValue(':cpf', $usuario->getCpf());
-            $stmt->bindValue(':ativo', $usuario->getAtivo());
-            $stmt->bindValue(':status', $usuario->getStatus());
+            $stmt->bindParam(':nome', $usuario->getNome());
+            $stmt->bindParam(':email', $usuario->getEmail());
+            $stmt->bindParam(':senha', $usuario->getSenha());
+            $stmt->bindParam(':cpf', $usuario->getCpf());
+            $stmt->bindParam(':ativo', $usuario->getAtivo());
+            $stmt->bindParam(':status', $usuario->getStatus());
             $stmt->execute();
             return $stmt;
 
@@ -39,12 +39,12 @@ private $conn;
     public function entrar($usuario) {
         try 
         {
-            $stmt = $this->conn->prepare("SELECT * FROM $this->tabela WHERE email = :email AND  senha = :senha");
-            $stmt->bindValue(':email', $usuario->getEmail());
-            $stmt->bindValue(':senha', $usuario->getSenha());
+            $stmt = $this->conn->prepare("SELECT * FROM $this->tabela WHERE email = :email AND senha = :senha");
+            $stmt->bindParam(':email', $usuario->getEmail());
+            $stmt->bindParam(':senha', $usuario->getSenha());
             $stmt->execute();
-            return $stmt;
-
+            $obj = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $obj;
         } catch (PDOException  $e)
         {
             print $e->getMessage(); 
@@ -52,14 +52,25 @@ private $conn;
     }
 
     public function listar() {
-    try{
-         $sql = "SELECT * FROM $this->tabela WHERE ativo = 1";
-         $resultado = $this->conn->query($sql);
-         return $resultado;
-    }catch
-    (PDOException  $e) {
-        print $e->getMessage();
-    }       
+        try{
+             $sql = "SELECT * FROM $this->tabela WHERE ativo = 1";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
+    public function excluir($id_usuario) {
+        try{
+            $sql = "UPDATE $this->tabela SET ativo = 0 WHERE id_usuario= '" . $id_usuario . "' ";
+            $retorno = $this->conn->query($sql);
+            return $retorno;
+        }catch
+        (PDOException $e){
+            print $e->getMessage();
+        }        
     }
 
 }

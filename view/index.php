@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(isset($_SESSION['id'])){
+	    header("Location: ../view/inicial.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +51,5 @@
 			</div>
 		</form>
 	</div>
-	<form action="../controller/usuario.php" method="post">
-		<input type="submit" name="acao" value="Listar">
-	</form>
 </body>
 </html>

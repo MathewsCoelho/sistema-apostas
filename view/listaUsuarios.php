@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title> Listagem </title>
-</head>
-<body>
-
+<?php
+    require_once("header.php");
+?> 
+		<table>
+			<tr>
+				<th> Id do Usuário </th>
+				<th> Nome </th>
+				<th> Email </th>
+				<th> CPF </th>
+				<th> Senha </th>
+				<th> Tipo </th>
+			</tr>
 		<?php
 			foreach ($listar as $l) {
 		?>
@@ -14,14 +19,12 @@
 				<td><?php echo $l['email']; ?></td>
 				<td><?php echo $l['cpf']; ?></td>
 				<td><?php echo $l['senha']; ?></td>
-				<td><?php echo $l['status']; ?></td>
-				<td><?php echo $l['tipo']; ?></td>		
-				<td><?php echo $l['ativo']; ?></td>	
-				<td><a href="../Controller/usuario.php?cd_usuario=<?php echo $l['cd_usuario']; ?>&tag=Editar"><input class="btn btn-success" type = "button" name="tag" value="Editar"/></a></td>
-				<td><a href="../Controller/usuario.php?cd_usuario=<?php echo $l['cd_usuario']; ?>&tag=Deletar"><input class="btn btn-danger" type = "button" name="tag" value="Deletar"/></a></td>
+				<td><?php echo $l['status']; ?></td>	
+				<td><a href="../controller/usuario.php?id_usuario=<?php echo $l['id_usuario']; ?>&tag=Deletar"><input type ="button" name="acao" value="Deletar"/></a></td>
 			</tr>
 			<?php		
 		}
 		?>
+		</table>
 </body>
 </html>
