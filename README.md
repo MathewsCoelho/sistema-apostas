@@ -1,6 +1,6 @@
 # Sistema de Apostas
 
-## Sistema de Apostas em PDO para disciplina de Linguagem de Programação Orientada a Objetos
+## Aplicação em PDO para disciplina de Linguagem de Programação Orientada a Objetos
 
 ### Clone o projeto:
 git clone https://github.com/MathewsCoelho/sistema-apostas
