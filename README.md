@@ -19,6 +19,8 @@ O Administrador pode:
 - Visualizar/Deletar Usuários
 - Visualizar Ranking
 
-O usuário comum pode:
+O usuário apostador pode:
 - Visualizar etapas
 - Visualizar ranking
+- Realizar Cadastro
+- Realizar Login
