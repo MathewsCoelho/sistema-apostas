@@ -1,7 +1,10 @@
 <?php
 	session_start();
-	if(isset($_SESSION['id'])){
-	    header("Location: ../view/inicial.php");
+	if($_SESSION['tipo'] === '2'){
+		echo '<script>window.location="../view/admin.php";</script>';
+	}	
+	else if($_SESSION['tipo'] === '1'){		
+		echo '<script>window.location="../view/inicial.php";</script>';
 	}
 ?>
 

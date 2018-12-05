@@ -39,11 +39,23 @@ h2{
 	color: white;
 	display: flex;
 	align-items: center;
+	position: relative;
 	justify-content: center;
 }
 
 .header h1{
 	font-size: 1.5em;
+}
+
+.user{
+	position: absolute;
+	right: 30px;
+	top: 22px;
+	font-size: 0.875em;
+}
+
+.user span{
+	font-weight: 700;
 }
 
 .content{

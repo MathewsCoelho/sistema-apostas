@@ -3,6 +3,9 @@
 	if(!isset($_SESSION['id'])){
 	    header("Location: ../view/index.php");
 	}
+	else if($_SESSION['tipo'] === '1'){		
+		echo '<script>window.location="../view/inicial.php";</script>';
+	}
 ?>
 
 <!DOCTYPE html>
@@ -15,4 +18,5 @@
 <body>
 	<div class="header">
 		<h1> Sistema de Apostas </h1>
+		<p class="user"> Olá, <span> <?= $_SESSION['nome'] ?> </span> Seja bem-vindo. </p>
 	</div>
