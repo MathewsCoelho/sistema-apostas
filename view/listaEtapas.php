@@ -14,9 +14,9 @@
 				<td><?php echo $l['id_etapa']; ?></td>
 				<td><?php echo $l['local']; ?></td>
 				<td><?php echo $l['id_vencedor']; ?></td>
-				<td><a href="../Controller/etapa.php?id_etapa=<?php echo $l['id_etapa']; ?>&tag=Visualizar"><input type = "button" name="tag" value="Visualizar"/></a></td>
+				<td><a href="../Controller/etapa.php?id_etapa=<?php echo $l['id_etapa']; ?>&tag=Visualizar"><input class="btnInfo" type="button" name="tag" value="Visualizar"/></a></td>
 				<?php if($_SESSION['tipo'] === '2'){ ?>
-				<td><a href="../Controller/etapa.php?id_etapa=<?php echo $l['id_etapa']; ?>&tag=Deletar"><input type = "button" name="tag" value="Deletar"/></a></td>
+				<td><a href="../Controller/etapa.php?id_etapa=<?php echo $l['id_etapa']; ?>&tag=Deletar"><input class="btnDanger" type="button" name="tag" value="Deletar"/></a></td>
 				<?php } ?>
 			</tr>
 		<?php		

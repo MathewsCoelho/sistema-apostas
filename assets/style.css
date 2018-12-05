@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+}
+
+body{
+	background-color: #2c3e50;
+}
+
+table{
+	background-color: white;
+	margin: 40px auto;
+	font-family: 'Roboto', sans-serif;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+td, th{
+	font-size: 0.875em;
+	border: 1px solid #dddddd;
+	padding: 8px;
+	text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+h1, h2, h3, p, a, label, input{
+	font-family: 'Roboto', sans-serif;
+}
+
+h2{
+	color: white;
+}
+
+.header{
+	height: 60px;
+	background-color:  #dc3545;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header h1{
+	font-size: 1.5em;
+}
+
+.content{
+	width: 80%;
+	margin: 30px auto;
+}
+
+.content h2{
+	width: 100%;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.formLogin{
+	width: 50%;
+	float: left;
+}
+
+.formCadastro{
+	width: 50%;
+	float: left;
+}
+
+label{
+	display: block;
+	color: white;
+}
+
+.input{
+	outline: none;
+	margin: 0 0 10px;
+	padding: 10px 0 4px;
+	border: none;
+	border-bottom: 1px solid white;
+	width: 100%;
+	transition: all .3s;
+	background-color: transparent;
+	font-size: 0.875em;
+	color: white;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+.input:focus{
+	border-bottom: 2px solid #dc3545;
+}
+
+.form-control{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.btnInput{
+	border: none;
+	background-color: #dc3545;
+	color: white;
+	border-radius: 10px;
+	width: 100%;
+	height: 48px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.btnInput:hover{
+	background-color: #b91b2b;
+}
+
+.bg-admin{
+	width: 100%;
+	height: 100vh;
+	background-color: #2c3e50;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.formAdmin{
+	width: 500px;
+	text-align: center;
+	height: 340px;
+	background-color: #bdc3c7;
+}
+
+.formAdmin h2{
+	margin: 30px 0;
+	width: 100%;
+	color: black;
+}
+
+.formAdmin .form-control{
+	width: 80%;
+	margin: 30px auto;
+}
+
+.formAdmin .input{
+	color: black;
+}
+
+.formAdmin label{
+	color: black;
+}
+
+.header-admin{
+	height: auto;
+	display: flex;
+    justify-content: space-around;
+}
+
+.btnDanger{
+    background-color: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+    padding: 10px 8px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btnDanger:hover{
+	background-color: #e74c3c;
+	color: white;
+}
+
+.btnInfo{
+	background-color: transparent;
+	border: 1px solid #34495e;
+	color: #34495e;
+    padding: 10px 8px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.btnInfo:hover{
+	background-color: #34495e;
+	color: white;
+}
+
+
+.logout{
+	text-decoration: none;
+	color: white;
+	background-color: #dc3545;
+	width: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	transition: all .3s;
+}
+
+.logout:hover{
+	background-color: #b91b2b;
+}
+
+.formCavalo{
+	margin: 30px 0;
+	float: left;
+	height: 200px;
+	width: 50%;
+}
+
+.formEtapa{
+	margin: 30px 0;
+	float: left;
+	height: 100px;
+	width: 50%;
+}
+
+.margin{
+	margin: 5px 0;
+}

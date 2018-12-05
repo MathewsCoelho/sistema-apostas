@@ -16,7 +16,7 @@
 				<td><?php echo $l['nome']; ?></td>
 				<td><?php echo $l['numero']; ?></td>
 	
-				<td><a href="../controller/cavalo.php?id_cavalo=<?php echo $l['id_cavalo']; ?>&tag=Deletar"><input type = "button" name="acao" value="Deletar"/></a></td>
+				<td><a href="../controller/cavalo.php?id_cavalo=<?php echo $l['id_cavalo']; ?>&tag=Deletar"><input class="btnDanger" type="button" name="acao" value="Deletar"/></a></td>
 			</tr>
 			<?php		
 		}

@@ -12,15 +12,15 @@
 		?>
 
 		<div>
-			<h1> Realizar Aposta </h1>
+			<h2> Realizar Aposta </h2>
 			<form action="../controller/aposta.php" method="post">
-				<div>
+				<div class="form-control">
 					<label for="numero"> Número do Cavalo </label>
-					<input type="text" name="numero" id="numero">
+					<input class="input" type="text" name="numero" id="numero">
 					<input type="hidden" name="id_etapa" value="<?php echo $l['id_etapa']?>">
 				</div>
-				<div>
-					<input type="submit" name="acao" value="Cadastrar Aposta">
+				<div class="form-control">
+					<input class="btnInput" type="submit" name="acao" value="Cadastrar Aposta">
 				</div>
 			</form>
 		</div>
