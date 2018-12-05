@@ -37,7 +37,6 @@ CREATE TABLE cavalo
 CREATE TABLE ranking
 (
     id_ranking serial PRIMARY KEY,
-    posicao int,
     id_usuario int REFERENCES usuario (id_usuario),
     pontos int
 );

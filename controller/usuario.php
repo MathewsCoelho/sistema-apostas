@@ -87,6 +87,12 @@ if(isset($_GET['tag'])){
 			echo '<script>window.location="../view/admin.php";</script>';
 		}
 	}
+
+	else if($tag === "Editar"){	
+		$id_usuario = $_GET['id_usuario'];
+		$listar = $usuarioPDO->listarUsuario($id_usuario);
+		include_once "../view/editaUsuario.php";
+	}
 }
 
 

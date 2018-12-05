@@ -195,6 +195,19 @@ label{
 	color: white;
 }
 
+.btnEditar{
+	background-color: transparent;
+	border: 1px solid #8e44ad;
+	color: #8e44ad;
+	padding: 10px 8px;
+	transition: all .3s;
+	cursor: pointer;
+}
+
+.btnEditar:hover{
+	background-color: #8e44ad;
+	color: white;
+}
 
 .logout{
 	text-decoration: none;

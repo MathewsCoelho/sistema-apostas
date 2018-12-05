@@ -3,10 +3,6 @@
 	if(!isset($_SESSION['id'])){
 	    header("Location: ../view/index.php");
 	}
-	else if($_SESSION['tipo'] === '2'){
-		echo '<script>window.location="../view/admin.php";</script>';
-	}	
-
 ?>
 
 <!DOCTYPE html>

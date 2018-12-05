@@ -19,7 +19,8 @@
 				<td><?php echo $l['email']; ?></td>
 				<td><?php echo $l['cpf']; ?></td>
 				<td><?php echo $l['senha']; ?></td>
-				<td><?php echo $l['status']; ?></td>	
+				<td><?php echo $l['status']; ?></td>
+				<td><a href="../controller/usuario.php?id_usuario=<?php echo $l['id_usuario']; ?>&tag=Editar"><input class="btnEditar" type ="button" name="acao" value="Editar"/></a></td>	
 				<td><a href="../controller/usuario.php?id_usuario=<?php echo $l['id_usuario']; ?>&tag=Deletar"><input class="btnDanger" type ="button" name="acao" value="Deletar"/></a></td>
 			</tr>
 			<?php		

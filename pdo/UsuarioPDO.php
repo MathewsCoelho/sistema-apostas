@@ -62,6 +62,18 @@ private $conn;
         }       
     }
 
+
+    public function listarUsuario($id_usuario) {
+        try{
+             $sql = "SELECT * FROM $this->tabela WHERE id_usuario = $id_usuario";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
     public function excluir($id_usuario) {
         try{
             $sql = "UPDATE $this->tabela SET ativo = 0 WHERE id_usuario= '" . $id_usuario . "' ";
