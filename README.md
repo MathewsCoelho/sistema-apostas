@@ -11,6 +11,9 @@ Configure o arquivo sistema-apostas/pdo/ConexaoDB.php com o User e Senha do seu 
 
 Abra o navegador com o Apache e o Postgres ligados e acesse: http://localhost/sistema-apostas/view/ para acessar a aplicação.
 
+Para efetuar login como administrador acesse: http://localhost/sistema-apostas/view/loginAdmin.php com as credenciais
+- E-mail: admin@gmail.com
+- Senha: admin
 
 O Administrador pode:
 - Efetuar Login
