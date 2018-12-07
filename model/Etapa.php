@@ -6,6 +6,7 @@ class Etapa{
     private $vencedor;
     private $local;
     private $ativo;
+    private $cavalo;
 
     public function __construct() {
     }

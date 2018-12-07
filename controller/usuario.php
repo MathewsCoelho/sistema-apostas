@@ -14,13 +14,12 @@ if(isset($_POST['acao'])){
 	if($acao === 'Entrar'){
 		$email = $_POST['email'];
 		$senha = $_POST['senha'];
-				
 		$usuario = new Usuario();
 		$usuario->setEmail($email);
 		$usuario->setSenha($senha);
 		$login = $usuarioPDO->entrar($usuario);
 
-		if($login){
+		if($login){	
 			$_SESSION['nome'] = $login['nome'];
 			$_SESSION['id'] = $login['id_usuario'];
 			$_SESSION['tipo'] = $login['status'];
@@ -60,6 +59,28 @@ if(isset($_POST['acao'])){
 		}
 		else{
 			echo "<script>alert('Erro ao cadastrar, tente novamente!');</script>";
+			echo '<script>window.location="../view/index.php";</script>';
+		}
+	}
+
+	else if($acao === 'Editar Usuario'){
+		$email = $_POST['email'];
+		$senha = $_POST['senha'];
+		$cpf = $_POST['cpf'];
+		$nome = $_POST['nome'];
+		$id_usuario = $_POST['id_usuario'];
+		$usuario = new Usuario();
+		$usuario->setEmail($email);
+		$usuario->setSenha($senha);
+		$usuario->setCpf($cpf);
+		$usuario->setNome($nome);
+		$usuario->setId($id_usuario);
+		if($usuarioPDO->editar($usuario)){
+			echo "<script>alert('Usuário editado com sucesso!');</script>";
+			echo '<script>window.location="../view/index.php";</script>';
+		}
+		else{
+			echo "<script>alert('Erro ao editar, tente novamente!');</script>";
 			echo '<script>window.location="../view/index.php";</script>';
 		}
 	}

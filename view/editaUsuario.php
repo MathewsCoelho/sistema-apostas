@@ -21,6 +21,7 @@
 				<label for="cpf">CPF</label>
 				<input class="input" type="text" name="cpf" id="cpf" placeholder="Digite seu CPF" value="<?= $l['cpf'] ?>">
 			</div>
+			<input class="input" type="hidden" name="id_usuario" value="<?= $l['id_usuario'] ?>">
 			<div class="form-control">
 				<input type="submit" class="btnInput" name="acao" value="Editar Usuario">
 			</div>
@@ -29,6 +30,7 @@
 		<?php		
 			}
 		?>
-		</table>
-</body>
-</html>
+
+<?php
+    require_once("footer.php");
+?> 

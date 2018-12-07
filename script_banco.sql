@@ -52,8 +52,6 @@ CREATE TABLE corredor
 INSERT INTO usuario (nome, cpf, email, senha, status, ativo) 
 VALUES ('Admin', '04053254019', 'admin@gmail.com', 'admin', 2, 1);
 
-INSERT INTO usuario (nome, cpf, email, senha, status, ativo) 
-VALUES ('Matheus', '04053254020', 'matheus@gmail.com', 'admin', 1, 1);
 
 INSERT INTO cavalo (numero, nome, ativo) VALUES (1, 'Pé de Pano', 1);
 INSERT INTO cavalo (numero, nome, ativo) VALUES (2, 'Chumbinho', 1);

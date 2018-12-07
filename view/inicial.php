@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if(!isset($_SESSION['id'])){
+	    header("Location: ../view/index.php");
+	}
     require_once("header.php");
 ?> 
 <body>
@@ -12,7 +16,6 @@
 		</form>
 	</div>
 
-	<a href="../controller/logout.php" class="logout"> Deslogar </a>
-
-</body>
-</html>
+<?php
+    require_once("footer.php");
+?> 

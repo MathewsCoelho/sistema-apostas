@@ -32,10 +32,37 @@ private $conn;
             print $e->getMessage(); 
         } 
     }
+
+    public function editar($cavalo) {
+        try 
+        {
+            $stmt = $this->conn->prepare("UPDATE $this->tabela SET nome = :nome, numero = :numero WHERE id_cavalo = :id");
+            $stmt->bindParam(':nome', $cavalo->getNome());
+            $stmt->bindParam(':numero', $cavalo->getNumero());
+            $stmt->bindParam(':id', $cavalo->getId());
+            $stmt->execute();
+            return $stmt;
+
+        } catch (PDOException  $e)
+        {
+            print $e->getMessage(); 
+        } 
+    }
     
     public function listar() {
         try{
              $sql = "SELECT * FROM $this->tabela WHERE ativo = 1";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
+    public function listarCavalo($id_cavalo) {
+        try{
+             $sql = "SELECT * FROM $this->tabela WHERE id_cavalo = $id_cavalo";
              $resultado = $this->conn->query($sql);
              return $resultado;
         }catch

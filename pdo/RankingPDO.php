@@ -17,6 +17,21 @@ private $conn;
          }
     }
 
+    public function inserir($id_usuario) {
+        try 
+        {
+            $stmt = $this->conn->prepare("INSERT INTO $this->tabela (id_usuario, pontos) VALUES (?, 0)");
+            $stmt->bindValue(1, $id_usuario);
+            $stmt->execute();
+            return $stmt;
+
+        } catch (PDOException  $e)
+        {
+            print $e->getMessage(); 
+
+        } 
+    }
+
     public function listar() {
         try{
              $sql = "SELECT * FROM $this->tabela JOIN usuario USING(id_usuario)";

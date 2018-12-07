@@ -14,7 +14,6 @@
 		<form action="../controller/cavalo.php" method="post">
 			<input class="btnInput margin" type="submit" name="acao" value="Listar Cavalos">
 		</form>
-					<a href="../controller/logout.php" class="logout"> Deslogar </a>
 	</div>
 	<div class="content">
 		<div class="formCavalo">
@@ -47,5 +46,6 @@
 		</div>
 	</div>
 
-</body>
-</html>
+<?php
+    require_once("footer.php");
+?> 

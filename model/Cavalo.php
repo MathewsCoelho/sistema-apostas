@@ -2,6 +2,7 @@
 
 class Cavalo{
     
+    private $id;
     private $numero;
     private $ativo;
     private $nome;
@@ -9,6 +10,9 @@ class Cavalo{
     function __construct() {
     }
 
+    function getId() {
+        return $this->id;
+    }
     function getNumero() {
         return $this->numero;
     }
@@ -19,6 +23,9 @@ class Cavalo{
         return $this->nome;
     }
 
+    function setId($id) {
+        $this->id = $id;
+    }
     function setNumero($numero) {
         $this->numero = $numero;
     }

@@ -15,12 +15,14 @@
 				<td><?php echo $l['id_cavalo']; ?></td>
 				<td><?php echo $l['nome']; ?></td>
 				<td><?php echo $l['numero']; ?></td>
-				<td><a href="../controller/usuario.php?id_usuario=<?php echo $l['id_usuario']; ?>&tag=Editar"><input class="btnEditar" type ="button" name="acao" value="Editar"/></a></td>	
+				<td><a href="../controller/cavalo.php?id_cavalo=<?php echo $l['id_cavalo']; ?>&tag=Editar"><input class="btnEditar" type ="button" name="acao" value="Editar"/></a></td>	
 				<td><a href="../controller/cavalo.php?id_cavalo=<?php echo $l['id_cavalo']; ?>&tag=Deletar"><input class="btnDanger" type="button" name="acao" value="Deletar"/></a></td>
 			</tr>
 			<?php		
 		}
 		?>
 	</table>	
-</body>
-</html>
+
+<?php
+    require_once("footer.php");
+?> 
