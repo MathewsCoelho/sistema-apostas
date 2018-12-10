@@ -17,13 +17,15 @@ Para efetuar login como administrador acesse: http://localhost/sistema-apostas/v
 
 O Administrador pode:
 - Efetuar Login
-- Visualizar/Cadastrar/Deletar Cavalos
-- Visualizar/Cadastrar/Deletar Etapas
-- Visualizar/Deletar Usuários
-- Visualizar Ranking
+- Visualizar/Cadastrar/Editar/Deletar Cavalos
+- Visualizar/Cadastrar/Editar/Deletar Etapas
+- Visualizar/Editar/Deletar Usuários
+- Visualizar o Ranking
+- Visualizar as Apostas feitas
 
 O usuário apostador pode:
 - Visualizar etapas
 - Visualizar ranking
 - Realizar Cadastro
 - Realizar Login
+- Realizar Apostas
