@@ -17,21 +17,22 @@ CREATE TABLE etapa
     ativo int
 );
 
-CREATE TABLE aposta
-(
-    id_aposta serial PRIMARY KEY,
-    data_aposta date ,
-    id_usuario int REFERENCES usuario (id_usuario),
-    id_etapa int  REFERENCES etapa (id_etapa),
-    ativo int
-);
-    
 CREATE TABLE cavalo
 (
     id_cavalo serial PRIMARY KEY,
     numero int,
     ativo int,
     nome character varying(50)
+);
+
+CREATE TABLE aposta
+(
+    id_aposta serial PRIMARY KEY,
+    data_aposta date,
+    id_usuario int REFERENCES usuario (id_usuario),
+    id_etapa int  REFERENCES etapa (id_etapa),
+    id_cavalo int REFERENCES cavalo (id_cavalo),
+    ativo int
 );
 
 CREATE TABLE ranking

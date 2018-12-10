@@ -2,7 +2,7 @@
 
 
 class Etapa{
-    
+    private $id;
     private $vencedor;
     private $local;
     private $ativo;
@@ -11,6 +11,9 @@ class Etapa{
     public function __construct() {
     }
 
+    function getId() {
+        return $this->id;
+    }
     function getVencedor() {
         return $this->vencedor;
     }
@@ -19,6 +22,9 @@ class Etapa{
     }
     function getAtivo() {
         return $this->ativo;
+    }
+    function setId($id) {
+        $this->id = $id;
     }
     function setVencedor($vencedor) {
         $this->vencedor = $vencedor;

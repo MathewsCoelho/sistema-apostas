@@ -6,12 +6,13 @@ class Aposta{
     private $ativo;
     private $usuario;
     private $etapa;
+    private $cavalo;
     private $data;
 
     function __construct() {
     }
 
-    function getidAposta() {
+    function getIdAposta() {
         return $this->id_aposta;
     }
 
@@ -30,8 +31,11 @@ class Aposta{
     function getData(){
         return $this->data;
     }
+    function getCavalo(){
+        return $this->cavalo;
+    }
 
-    function setidAposta($id_aposta) {
+    function setIdAposta($id_aposta) {
         $this->id_aposta = $id_aposta;
     }
        
@@ -47,8 +51,12 @@ class Aposta{
         $this->etapa = $etapa;
     }
 
-    function setEtapa($data) {
+    function setData($data) {
         $this->data = $data;
+    }
+
+    function setCavalo($cavalo) {
+        $this->cavalo = $cavalo;
     }
 
     public function __toString() {

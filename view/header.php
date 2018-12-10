@@ -7,6 +7,11 @@
 </head>
 <body>
 	<div class="header">
-		<h1> Sistema de Apostas </h1>
-		<p class="user"> Olá, <span> <?= $_SESSION['nome'] ?> </span> Seja bem-vindo. </p>
+		<div>
+			<h1> Sistema de Apostas </h1>
+		</div>
+
+		<div>
+			<p class="user"> Olá, <span> <?= $_SESSION['nome'] ?> </span> Seja bem-vindo. </p>
+		</div>
 	</div>

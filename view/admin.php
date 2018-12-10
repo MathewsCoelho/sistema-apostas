@@ -14,6 +14,9 @@
 		<form action="../controller/cavalo.php" method="post">
 			<input class="btnInput margin" type="submit" name="acao" value="Listar Cavalos">
 		</form>
+		<form action="../controller/aposta.php" method="post">
+			<input class="btnInput margin" type="submit" name="acao" value="Listar Apostas">
+		</form>
 	</div>
 	<div class="content">
 		<div class="formCavalo">

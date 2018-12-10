@@ -10,26 +10,31 @@ $apostaPDO = new ApostaPDO();
 if(isset($_POST['acao'])){
 	$acao = $_POST['acao'];
 	if($acao === 'Cadastrar Aposta'){
-		$numero = $_POST['numero'];
+		$id_cavalo = $_POST['corredor'];
 		$id_etapa = $_POST['id_etapa'];
 		$id_usuario = $_SESSION['id'];
-		$data = date('y/m/d');
+		$data = date('Y-m-d');
 		$ativo = 1;
-		$etapa = new Aposta();
+		$aposta = new Aposta();
+		$aposta->setData($data);
+		$aposta->setUsuario($id_usuario);
+		$aposta->setEtapa($id_etapa);
+		$aposta->setAtivo($ativo);
+		$aposta->setCavalo($id_cavalo);
 
-		$etapa->setData($data);
-		$etapa->setUsuario($id_usuario);
-		$etapa->setEtapa($id_etapa);
-		$etapa->setAtivo($ativo);
-		$etapa->setEtapa($id_etapa);
-		if($apostaPDO->inserir($etapa)){
-			echo "<script>alert('Etapa cadastrada com sucesso!');</script>";
+		if($apostaPDO->inserir($aposta)){
+			echo "<script>alert('Aposta feita com sucesso!');</script>";
 			echo '<script>window.location="../view/inicial.php";</script>';
 		}
 		else{
-			echo "<script>alert('Erro ao cadastar etapa, tente novamente!');</script>";
+			echo "<script>alert('Erro ao realizar aposta, tente novamente!');</script>";
 			echo '<script>window.location="../view/index.php";</script>';
 		}
+	}
+
+	else if($acao == "Listar Apostas"){	
+		$listar = $apostaPDO->listar();
+		include_once "../view/listaApostas.php";
 	}
 }
 

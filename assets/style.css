@@ -39,18 +39,20 @@ h2{
 	color: white;
 	display: flex;
 	align-items: center;
-	position: relative;
-	justify-content: center;
+	justify-content: space-between;
+	padding: 0 126px;
 }
 
 .header h1{
 	font-size: 1.5em;
 }
 
+.header li{
+	list-style: none;
+	display: inline-block;
+}
+
 .user{
-	position: absolute;
-	right: 30px;
-	top: 22px;
 	font-size: 0.875em;
 }
 
@@ -95,6 +97,16 @@ label{
 	background-color: transparent;
 	font-size: 0.875em;
 	color: white;
+}
+
+.select{
+	outline: none;
+	margin: 0 0 10px;
+	padding: 10px 0 4px;
+	border-bottom: 1px solid white;
+	width: 100%;
+	transition: all .3s;
+	font-size: 0.875em;
 }
 
 ::-webkit-input-placeholder {
