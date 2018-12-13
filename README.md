@@ -20,7 +20,7 @@ O Administrador pode:
 - Visualizar/Cadastrar/Editar/Deletar Cavalos
 - Visualizar/Cadastrar/Editar/Deletar Etapas
 - Visualizar/Editar/Deletar Usuários
-- Visualizar o Ranking
+- Visualizar/Editar o Ranking
 - Visualizar as Apostas feitas
 
 O usuário apostador pode:
@@ -29,3 +29,16 @@ O usuário apostador pode:
 - Realizar Cadastro
 - Realizar Login
 - Realizar Apostas
+
+
+### Tarefas a serem feitas:
+[x] Filtragem de Ranking apenas com Usuários ativos no Sistema
+[x] Editar pontuação do Ranking
+[ ] Filtragem de Usuário por Nome
+[ ] Filtragem de Cavalo por Nome
+[ ] Filtragem de Filtro por Nome
+[ ] Filtragem de Corredores por Nome
+[ ] Filtragem de Usuário por Nome
+[ ] Filtragem de Aposta por Etapa
+[ ] Usuário Deletar aposta
+[ ] Filtragem de Usuário por Nome
