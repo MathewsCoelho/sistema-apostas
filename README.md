@@ -32,7 +32,7 @@ O usuário apostador pode:
 
 
 ### Tarefas a serem feitas:
-[x] Filtragem de Ranking apenas com Usuários ativos no Sistema
+- [x] Filtragem de Ranking apenas com Usuários ativos no Sistema
 [x] Editar pontuação do Ranking
 [ ] Filtragem de Usuário por Nome
 [ ] Filtragem de Cavalo por Nome
