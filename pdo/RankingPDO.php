@@ -28,13 +28,12 @@ private $conn;
         } catch (PDOException  $e)
         {
             print $e->getMessage(); 
-
         } 
     }
 
     public function listar() {
         try{
-             $sql = "SELECT * FROM $this->tabela JOIN usuario USING(id_usuario)";
+             $sql = "SELECT * FROM $this->tabela JOIN usuario USING(id_usuario) WHERE ativo = 1";
              $resultado = $this->conn->query($sql);
              return $resultado;
         }catch
