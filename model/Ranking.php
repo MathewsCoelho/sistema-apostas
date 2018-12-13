@@ -18,10 +18,10 @@ class Ranking{
     function getUsuario() {
         return $this->usuario;
     }
-    function setUsuario($pontos) {
+    function setUsuario($usuario) {
         $this->usuario = $usuario;
     }
-        
+      
     public function __toString() {
         return "\Ranking[pontos=$this->pontos,  $this->__toString()]";
     }
