@@ -8,11 +8,8 @@
 			<tr>
 				<td> <h2> Etapa de <?php echo $l['local']; ?> </h2></td>
 			</tr>
-			<?php		
-		}
-		?>
-
 		<div>
+			<?php  echo $l['ativo']; if($l['ativo'] === 1){ ?>
 			<h2> Realizar Aposta </h2>
 			<form action="../controller/aposta.php" method="post">
 				<div class="form-control">
@@ -29,7 +26,13 @@
 					<input class="btnInput" type="submit" name="acao" value="Cadastrar Aposta">
 				</div>
 			</form>
+		<?php } else{ ?>
+			<h2> Etapa Finalizada  </h2>
 		</div>
+			<?php		
+			}
+		}
+		?>
 	</div>
 <?php
     require_once("footer.php");

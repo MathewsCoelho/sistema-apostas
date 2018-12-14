@@ -47,7 +47,7 @@ private $conn;
 
     public function listar() {
         try{
-             $sql = "SELECT * FROM $this->tabela WHERE ativo = 1";
+             $sql = "SELECT * FROM $this->tabela WHERE ativo = 1 OR ativo = 2";
              $resultado = $this->conn->query($sql);
              return $resultado;
         }catch
@@ -108,8 +108,7 @@ private $conn;
 
     public function finalizarEtapa($etapa) {
         try{
-             $stmt = $this->conn->prepare("UPDATE $this->tabela SET id_vencedor = :id_vencedor WHERE id_etapa = :id_etapa");
-
+             $stmt = $this->conn->prepare("UPDATE $this->tabela SET id_vencedor = :id_vencedor, ativo = 2 WHERE id_etapa = :id_etapa");
             $stmt->bindParam(':id_vencedor', $etapa->getVencedor());
             $stmt->bindParam(':id_etapa', $etapa->getId());
             $stmt->execute();
