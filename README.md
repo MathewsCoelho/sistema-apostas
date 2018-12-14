@@ -36,9 +36,6 @@ O usuário apostador pode:
 - [x] Editar pontuação do Ranking
 - [ ] Filtragem de Usuário por Nome
 - [ ] Filtragem de Cavalo por Nome
-- [ ] Filtragem de Filtro por Nome
 - [ ] Filtragem de Corredores por Nome
-- [ ] Filtragem de Usuário por Nome
 - [ ] Filtragem de Aposta por Etapa
 - [ ] Usuário Deletar aposta
-- [ ] Filtragem de Usuário por Nome
