@@ -17,6 +17,6 @@
 </head>
 <body>
 	<div class="header">
-		<h1> Sistema de Apostas </h1>
+		<h1> <a href="../view/admin.php"> Sistema de Apostas </a> </h1>
 		<p class="user"> Olá, <span> <?= $_SESSION['nome'] ?> </span> Seja bem-vindo. </p>
 	</div>

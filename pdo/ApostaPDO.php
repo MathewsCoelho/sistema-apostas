@@ -46,4 +46,15 @@ private $conn;
         }       
     }
 
+    public function pesquisar($nome) {
+        try{
+            $sql = "SELECT usuario.nome, local, cavalo.nome as nome_cavalo FROM usuario JOIN aposta USING(id_usuario) JOIN etapa USING (id_etapa) JOIN cavalo USING(id_cavalo)  WHERE local LIKE '$nome%'";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
 }

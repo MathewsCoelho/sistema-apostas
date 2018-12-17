@@ -36,6 +36,13 @@ if(isset($_POST['acao'])){
 		$listar = $apostaPDO->listar();
 		include_once "../view/listaApostas.php";
 	}
+
+	else if($acao == "Pesquisar"){
+		$nome = $_POST['etapa'];
+		$listar = $apostaPDO->pesquisar($nome);
+		include_once "../view/listaApostas.php";
+
+	}
 }
 
 ?>

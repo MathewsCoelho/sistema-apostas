@@ -60,6 +60,17 @@ private $conn;
         }       
     }
 
+    public function pesquisar($nome) {
+        try{
+             $sql = "SELECT * FROM $this->tabela WHERE nome LIKE '$nome%'";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
     public function listarCavalo($id_cavalo) {
         try{
              $sql = "SELECT * FROM $this->tabela WHERE id_cavalo = $id_cavalo";

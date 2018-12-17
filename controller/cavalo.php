@@ -55,6 +55,13 @@ if(isset($_POST['acao'])){
 		$listar = $cavaloPDO->listar();
 		include_once "../view/listaCavalos.php";
 	}
+
+	else if($acao == "Pesquisar"){
+		$nome = $_POST['cavalo'];
+		$listar = $cavaloPDO->pesquisar($nome);
+		include_once "../view/listaCavalos.php";
+
+	}
 }
 
 if(isset($_GET['tag'])){

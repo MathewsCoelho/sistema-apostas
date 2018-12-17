@@ -89,6 +89,13 @@ if(isset($_POST['acao'])){
 		$listar = $usuarioPDO->listar();
 		include_once "../view/listaUsuarios.php";
 	}
+
+	else if($acao == "Pesquisar"){
+		$nome = $_POST['user'];
+		$listar = $usuarioPDO->pesquisar($nome);
+		include_once "../view/listaUsuarios.php";
+
+	}
 }
 
 if(isset($_GET['tag'])){

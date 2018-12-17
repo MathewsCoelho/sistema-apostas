@@ -1,7 +1,15 @@
 <?php
     require_once("header.php");
 ?> 
-
+	<form action="../controller/cavalo.php" method="post">
+		<div class="form-control">
+			<label for="cavalo"> Filtrar cavalos por nome: </label>
+			<input type="text" name="cavalo" class="input">
+		</div>
+		<div class="form-control">
+		<input type="submit" class="btnInput" name="acao" value="Pesquisar">
+		</div>
+	</form>
 	<table>
 		<tr>
 			<th> Id do Cavalo </th>

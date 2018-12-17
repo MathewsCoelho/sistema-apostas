@@ -31,7 +31,7 @@ CREATE TABLE aposta
     data_aposta date,
     id_usuario int REFERENCES usuario (id_usuario),
     id_etapa int  REFERENCES etapa (id_etapa),
-    id_cavalo int REFERENCES cavalo (id_cavalo),
+    id_cavalo int REFERENCES cavalo (id_cavalo) NOT NULL,
     ativo int
 );
 

@@ -8,7 +8,7 @@
 <body>
 	<div class="header">
 		<div>
-			<h1> Sistema de Apostas </h1>
+			<h1> <a href="../view/inicial.php"> Sistema de Apostas </a> </h1>
 		</div>
 
 		<div>
