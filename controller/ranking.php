@@ -31,6 +31,12 @@ if(isset($_POST['acao'])){
 			echo '<script>window.location="../view/admin.php";</script>';
 		}
 	}
+	else if($acao == "Pesquisar"){
+		$nome = $_POST['user'];
+		$listar = $rankingPDO->pesquisar($nome);
+		include_once "../view/listaRanking.php";
+
+	}
 }
 
 if(isset($_GET['tag'])){

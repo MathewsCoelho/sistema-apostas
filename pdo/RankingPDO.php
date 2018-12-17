@@ -53,6 +53,17 @@ private $conn;
         }       
     }
 
+    public function pesquisar($nome) {
+        try{
+            $sql = "SELECT * FROM $this->tabela JOIN usuario USING(id_usuario) WHERE nome LIKE '$nome%'";
+             $resultado = $this->conn->query($sql);
+             return $resultado;
+        }catch
+        (PDOException  $e) {
+            print $e->getMessage();
+        }       
+    }
+
     public function editar($ranking) {
         try 
         {
